@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="16dp"
+                android:columnCount="1"
+                android:rowCount="6">
+
+                <android.support.design.widget.TextInputLayout style="@style/TILStyle">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/email_newuser"
+                        style="@style/textFields"
+                        android:drawableLeft="@drawable/ic_person_white_24px"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout style="@style/TILStyle">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/username_newuser"
+                        style="@style/textFields"
+                        android:hint="Username"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout style="@style/TILStyle">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/roll_newuser"
+                        style="@style/textFields"
+                        android:hint="Roll Number"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout style="@style/TILStyle">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/pass_newuser"
+                        style="@style/textFields"
+                        android:drawableLeft="@drawable/key"
+                        android:hint="Password"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="20dp"
+                    app:mrl_rippleColor="@color/white"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleDimension="10dp"
+                    app:mrl_rippleDuration="1500"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <Button
+                        android:id="@+id/getstarted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/ic_path_12"
+                        android:fontFamily="sans-serif"
+                        android:text="Register"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </GridLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
